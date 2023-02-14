@@ -1,0 +1,24 @@
+{
+  "name": "myexpressserver",
+  "version": "1.0.0",
+  "description": "server for my application",
+  "main": "myserver.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node myserver.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dioguinho47/myServer.git"
+  },
+  "author": "Diogo Duarte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dioguinho47/myServer/issues"
+  },
+  "homepage": "https://github.com/dioguinho47/myServer#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "jokemaster": "github:mm-207/JokeModuleDemo"
+  }
+}

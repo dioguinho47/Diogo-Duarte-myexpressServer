@@ -6,13 +6,14 @@ class Translation{
     constructor(myLanguages){
         this.myLanguageFiles = myLanguages
         this.translation = null;
+        this.english = english;
+        this.norwegian = norwegian;
     }
     setTranslation = function(translation){
         this.myLanguageFiles = translation;
         this.translation = translation;
     }
     get = function(myKey){
-        //myText.innerText = this.translation[myKey];
         console.log(this.translation[myKey])
         return this.translation[myKey];
     }

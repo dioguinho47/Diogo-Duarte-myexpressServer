@@ -31,5 +31,5 @@ function getJoke(req, res, next){
 }
 
 server.listen(server.get('port'), function(){
-    console.log('server running', server.get('port'));
+    console.log('The server is running in port:', server.get('port'));
 });

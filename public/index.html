@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+
+   <button type="button" id="myBtn"> English </button>
+   <button type="button" id="myBtn2"> Norsk </button>
+
+   <h1 id="myTxt"></h1>
+
+    <script>
+        let myBtn = document.getElementById('myBtn');
+        let myBtn2 = document.getElementById('myBtn2');
+        let myTxt = document.getElementById('myTxt');
+
+        let jokeTranslations = "/jokes/english";
+
+        requestJoke();
+
+        async function requestJoke(){
+            let resp = await fetch(jokeTranslations);
+            let data = await resp.text();
+
+            myTxt.innerText = data;
+        }
+
+        function englishButton(){
+            jokeTranslations = "/jokes/english";
+            requestJoke();
+        }
+
+        function norwegianButton(){
+            jokeTranslations = "/jokes/norwegian";
+            requestJoke();
+        }
+
+        myBtn.addEventListener('click', englishButton);
+        myBtn2.addEventListener('click', norwegianButton);
+    </script>
+    
+</body>
+</html>
